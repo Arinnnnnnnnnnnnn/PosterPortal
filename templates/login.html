@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Poster Portal - Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Antonio&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css">
+    <style>
+        .bg-custom {
+            background-color: #2f1ab2;
+        }
+        .img-custom {
+            width: 400;
+            
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <div class="flex h-screen">
+        <div class="w-1/3 bg-custom flex">
+            <img src="static/PosterPortalpic.png" alt="PosterPortalpic" class="img-custom" onclick="">
+            <!-- <h1 class="text-7xl font-bold text-white">Poster Portal</h1> -->
+        </div>
+        <div class="w-1/2 flex flex-col justify-center items-center">
+            <h2 class="mb-4 pb-2 font-antonio font-bold text-gray-800 text-xl border-b-2 border-blue-900">LOGIN</h2>
+            <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" style="width: 400px" method="POST" action="/login">
+                <div class="mb-4"> 
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="username" type="text" placeholder="Username">
+                </div>
+                <div class="mb-6">
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline" id="password" type="password" placeholder="Password">
+                    <p class="text-gray-600 text-xs italic">Make it as long and as crazy as you'd like</p>
+                </div>
+                <div class="flex justify-between items-center mb-4">
+                    <a class="inline-block align-baseline font-bold text-sm text-purple-900 hover:text-purple-800" href="/forgot-password">
+                        Forgot Password?
+                    </a>
+                    <a class="inline-block align-baseline font-bold text-sm text-purple-900 hover:text-purple-800" href="/register">
+                        Sign Up
+                    </a>
+                </div>
+                <div class="flex justify-center">
+                    <button class="bg-blue-900 w-full hover:bg-purple-700 text-white font-bold py-3 px-6 rounded-full focus:outline-none focus:shadow-outline" type="submit">
+                        Log In
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

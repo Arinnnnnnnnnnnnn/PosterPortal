@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Poster Portal - Signup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Antonio&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.2/tailwind.min.css">
+    <style>
+        .bg-custom {
+            background-color: #2f1ab2;
+        }
+        .img-custom {
+            width: 400;
+            
+        }
+        .toggle-password {
+            position: relative;
+            top: -33px;
+            left: 360px;
+            cursor: pointer;
+        }
+        .toggle-password i {
+            color: #ccc;
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+        }
+        .toggle-password i.active {
+            color: #07f;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <div class="flex h-screen">
+        <div class="w-1/2 bg-custom flex ">
+            <img src="static/PosterPortalpic.png" alt="PosterPortalpic" class="img-custom">
+            <!-- <h1 class="text-7xl font-bold text-white">Poster Portal</h1> -->
+        </div>
+        <div class="w-1/2 flex flex-col justify-center items-center">
+            <h2 class="mb-4 pb-2 font-antonio font-bold text-gray-800 text-xl border-b-2 border-blue-900">SIGNUP</h2>
+            <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" style="width: 400px" method="POST" action="/register">
+                <div class="mb-4">
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" type="text" placeholder="Name" name="name">
+                </div>
+                <div class="mb-4">
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="email" type="email" placeholder="Email" name="email">
+                </div>
+                <div class="mb-4 relative">
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline pr-10" id="password" type="password" placeholder="Password" name="passwd">
+                    <i class='bx bx-hide toggle-password'></i>
+                </div>
+                <div class="mb-6 relative">
+                    <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline pr-10" id="confirm-password" type="password" placeholder="Confirm Password" name="cnfpasswd">
+                    <i class='bx bx-hide toggle-password'></i>
+                </div>
+                <div class="">
+                    <button class="
+                        bg-custom
+                        w-full 
+                        hover:bg-purple-700 
+                        text-white 
+                        font-bold 
+                        py-3 
+                        px-6 
+                        rounded-full 
+                        focus:outline-none 
+                        focus:shadow-outline" 
+                    type="submit">
+                        Sign Up
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bxslider/dist/vendor/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.toggle-password').click(function() {
+                $(this).toggleClass('active');
+                var input = $($(this).prev());
+                if (input.attr('type') == 'password') {
+                    input.attr('type', 'text');
+                } else {
+                    input.attr('type', 'password');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
